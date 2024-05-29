@@ -1,7 +1,7 @@
-const express = require('express')//aca importo express
-const path = require('path')//esto es para leer nuestras carpetas
+import express from 'express'//aca importo express
+import path from 'path'//esto es para leer nuestras carpetas
 
-const startServer = (options) => {  
+export const startServer = (options) => {  
     const { port, public_path = 'public'} = options
     
     const app = express()
@@ -20,6 +20,3 @@ const startServer = (options) => {
 
 }
 
-module.exports = {
-    startServer
-}
